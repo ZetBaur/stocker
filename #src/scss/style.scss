@@ -1,0 +1,93 @@
+@import "_mixins.scss";
+
+
+//<google-fonts>=======================================================================================
+
+
+@import "_fonts.scss";
+@import "_default-icomoon";
+//@import "_icomoon";
+
+
+//<default-font>==========================================================================================
+
+$fontFamily: "";
+
+
+//<variables>===========================================================================================================
+$minWidth: 320px;
+$maxWidth: 1920;
+$maxWidthContainer: 1170;
+$md1: $maxWidthContainer + 12;
+$md2: 991.98;
+$md3: 767.98;
+$md4: 479.98;
+
+//<Null>===============================================================================================
+@import "_null.scss";
+body {
+	color: #000;
+	font-size: 14px;
+	&._lock {
+		overflow: hidden;
+	}
+}
+
+//<Wrapper>===========================================================================================================
+.wrapper {
+	width: 100%;
+	min-height: 100%;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	&._loaded {
+	}
+}
+
+//<main-grid>===========================================================================================================
+._container {
+	max-width: $maxWidthContainer + px;
+	margin: 0 auto;
+	@media (max-width: $md1+px) {
+		max-width: 970px;
+	}
+	@media (max-width: $md2+px) {
+		max-width: 750px;
+	}
+	@media (max-width: $md3+px) {
+		max-width: none;
+		padding: 0 10px;
+	}
+}
+
+//<==== UI, Forms and ready classes>====================================================================================================
+
+@import "_forms.scss";
+@import "_ui.scss";
+@import "_datepicker";
+@import "_lightgallery";
+//@import "_pagging";
+@import "_popup";
+@import "_nouislider";
+@import "_tippy";
+// @import "_header";
+// @import "_footer";
+// @import "_home";
+
+//<Main block>====================================================================================================
+.page {
+	flex: 1 1 auto;
+}
+//===================================================================================================================================
+.gallery-block {
+
+	// .gallery-block__item
+
+	&__item {
+		img{
+			width: 100px;
+		}
+	}
+}
+
+//@import "_medias.scss";
